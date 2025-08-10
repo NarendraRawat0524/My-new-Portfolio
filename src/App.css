@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: #f4f6fa;
+  color: #21243d;
+  line-height: 1.6;
+}
+a {
+  color: #6C63FF;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3vw;
+  background: #272643;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(50,50,80,0.07);
+}
+.header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.header nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  color: #a3a3c2;
+}
+.header nav a.active, .header nav a:hover {
+  color: #6C63FF;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+section h2 {
+  font-size: 2.3rem;
+  margin-bottom: .75rem;
+  color: #272643;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+section p {
+  color: #43435c;
+  font-size: 1.08rem;
+}
+.bg-alt {
+  background: #fff;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 3px 20px rgba(50,50,80,0.04);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(50,50,80,0.07);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(108,99,255,0.11);
+}
+.project-card h3 {
+  margin-top: 0;
+  color: #6C63FF;
+  margin-bottom: .5rem;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.skill-item {
+  background: #f0f1fa;
+  color: #6c63ff;
+  font-weight: 600;
+  padding: .6rem 1.3rem;
+  border-radius: 19px;
+  font-size: 1rem;
+  border: 1px solid #e2e2f7;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  padding: 1.5rem 0;
+  background: #272643;
+  text-align: center;
+  color: #fff;
+  font-size: 1.01rem;
+  margin-top: 3rem;
+}
+@media (max-width: 600px) {
+  .header { flex-direction: column; align-items: flex-start; padding: 1rem 5vw;}
+  .header nav { margin-top: 1rem; }
+  section { padding: 2.3rem 1.2rem; }
+  .projects-grid { gap: 1rem; }
+}
+.app-background {
+  background-image: url('./assets/mountain-background.jpg');
+  background-size: cover;          /* Cover whole screen */
+  background-position: center;     /* Center the image */
+  background-repeat: no-repeat;    /* Don't repeat */
+  min-height: 100vh;               /* Minimum viewport height */
+  color: #fff;                    /* Make text white for contrast */
+  background-attachment: fixed;    /* Optional: fixed background while scrolling */
+}
+.app-background::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: -1; /* Behind all content */
+}
+
+
+.contact-heading {
+  color: #f6f4f9; /* Vivid purple */
+}
+
+.contact-item {
+  color: #3b82f6; /* Bright blue */
+}
+
+.contact-item strong {
+  color: #f5c506; /* Gold-yellow for label */
+}
+
+.contact-item a {
+  color: #d7f305; /* Fun pink for links */
+}
+.contact-item a:hover {
+  color: #f59e42; /* Orange hover */
+}
